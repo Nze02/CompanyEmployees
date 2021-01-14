@@ -172,3 +172,49 @@
 2021-01-14 01:33:19.0033 Trace Closing Layout Renderer: ${message}
 2021-01-14 01:33:19.0271 Debug Finished closing logging configuration.
 2021-01-14 01:33:19.0516 Info Logger has been shut down.
+2021-01-14 01:53:53.8219 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-01-14 01:53:54.0249 Debug Found assembly location directory: 'C:\Users\HP-PROBOOK\source\repos\CompanyEmployees\CompanyEmployees\bin\Debug\netcoreapp3.1' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2021-01-14 01:53:54.0604 Debug Search for auto loading files in location: C:\Users\HP-PROBOOK\source\repos\CompanyEmployees\CompanyEmployees\bin\Debug\netcoreapp3.1
+2021-01-14 01:53:54.1279 Debug Start auto loading, location: C:\Users\HP-PROBOOK\source\repos\CompanyEmployees\CompanyEmployees\bin\Debug\netcoreapp3.1
+2021-01-14 01:53:54.1541 Info Auto loading assembly file: C:\Users\HP-PROBOOK\source\repos\CompanyEmployees\CompanyEmployees\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-01-14 01:53:54.1726 Info Loading assembly file: C:\Users\HP-PROBOOK\source\repos\CompanyEmployees\CompanyEmployees\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-01-14 01:53:54.3618 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.0.1463. Product version: 1.7.0+53f8c72107ad200657b89638c4d236a0c9e351eb. GlobalAssemblyCache: False
+2021-01-14 01:53:54.3818 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-01-14 01:53:54.4051 Info Auto loading assembly file: C:\Users\HP-PROBOOK\source\repos\CompanyEmployees\CompanyEmployees\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll succeeded!
+2021-01-14 01:53:54.4280 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-01-14 01:53:54.4482 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-01-14 01:53:54.4683 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2021-01-14 01:53:54.4871 Debug Auto loading done
+2021-01-14 01:53:54.5073 Info Message Template Auto Format enabled
+2021-01-14 01:53:54.5952 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-01-14 01:53:54.6239 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-01-14 01:53:54.6620 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-01-14 01:53:54.6847 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-01-14 01:53:54.7044 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-01-14 01:53:54.7309 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-01-14 01:53:54.7555 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-01-14 01:53:54.7747 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-01-14 01:53:54.8031 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-01-14 01:53:54.8235 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-01-14 01:53:54.8447 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-01-14 01:53:54.8686 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-01-14 01:53:54.9889 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-01-14 01:53:55.0190 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2021-01-14 01:53:55.0432 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-01-14 01:53:55.0674 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-01-14 01:53:55.1165 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2021-01-14 01:53:55.1469 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\HP-PROBOOK\source\repos\CompanyEmployees\internal_logs\logs\${shortdate}_logfile.txt'
+2021-01-14 01:53:55.1744 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-01-14 01:53:55.1973 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-01-14 01:53:55.2331 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2021-01-14 01:53:55.2695 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-01-14 01:53:55.2999 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-01-14 01:53:55.3245 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-01-14 01:53:55.3567 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-01-14 01:53:55.3775 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-01-14 01:53:55.3970 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-01-14 01:53:55.4273 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-01-14 01:53:55.4346 Info AppDomain Shutting down. Logger closing...
+2021-01-14 01:53:55.4534 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-01-14 01:53:55.4796 Info Logger has been shut down.
+2021-01-14 01:53:55.5055 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
