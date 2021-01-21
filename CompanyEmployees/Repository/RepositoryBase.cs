@@ -17,6 +17,7 @@ namespace CompanyEmployees.Repository
         {
             RepositoryContext = repositoryContext;
         }
+
         public IQueryable<T> FindAll(bool trackChanges) => 
             !trackChanges ?
             RepositoryContext.Set<T>()
