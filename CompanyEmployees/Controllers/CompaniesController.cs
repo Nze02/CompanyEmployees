@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using CompanyEmployees.Contracts;
 using CompanyEmployees.DataTransferObjects;
+using CompanyEmployees.Entities.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -36,7 +37,7 @@ namespace CompanyEmployees.Controllers
 
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "CompanyById")]
         public IActionResult GetCompany(Guid id)
         {
             var company = _repository.Company.GetCompany(id, false);
@@ -45,11 +46,28 @@ namespace CompanyEmployees.Controllers
                 _logger.LogInfo($"Company with id: {id} doesn't exist in the database.");
                 return NotFound();
             }
-            else 
+            else
             {
                 var companyDto = _mapper.Map<CompanyDto>(company);
                 return Ok(companyDto);
             }
+        }
+
+        [HttpPost]
+        public IActionResult CreateCompany([FromBody] CompanyForCreationDto company)
+        {
+            if(company == null)
+            {
+                _logger.LogError("CompanyForCreationDto object sent from client is null.");
+                return BadRequest("CompanyForCreationDto object is null");
+            }
+
+            var companyEntity = _mapper.Map<Company>(company);
+            _repository.Company.CreateCompany(companyEntity);
+            _repository.Save();
+
+            return CreatedAtRoute("CompanyById", new {id = companyEntity.Id }, companyEntity);
+
         }
     }
 }
