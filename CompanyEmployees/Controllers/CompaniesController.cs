@@ -66,7 +66,9 @@ namespace CompanyEmployees.Controllers
             _repository.Company.CreateCompany(companyEntity);
             _repository.Save();
 
-            return CreatedAtRoute("CompanyById", new {id = companyEntity.Id }, companyEntity);
+            var companyToReturn = _mapper.Map<CompanyDto>(companyEntity);
+
+            return CreatedAtRoute("CompanyById", new {id = companyToReturn.Id }, companyToReturn);
 
         }
     }
